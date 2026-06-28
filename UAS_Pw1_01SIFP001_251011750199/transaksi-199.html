@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi - HendzStream</title>
+    <link rel="stylesheet" href="style-199.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Hendz<span>Stream</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profile-199.html">Profile</a></li>
+                <li><a href="transaksi-199.html" class="active">Transaksi</a></li>
+                <li><a href="login-199.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+    <section>
+        <h2>Form Input Transaksi Premium</h2>
+        <div class="card">
+            <form id="transaksiForm">
+                <label for="namaPembeli">Nama Pembeli:</label>
+                <input type="text" id="namaPembeli" placeholder="Masukkan nama Anda" required>
+
+                <label for="paketSelect">Pilih Paket:</label>
+                <select id="paketSelect">
+                    <option value="29000">Paket Mingguan - Rp 29.000</option>
+                    <option value="59000">Paket Bulanan - Rp 59.000</option>
+                    <option value="549000">Paket Tahunan - Rp 549.000</option>
+                </select>
+
+                <label for="durasi">Jumlah Durasi (Bulan/Minggu):</label>
+                <input type="number" id="durasi" min="1" value="1" required>
+
+                <button type="button" id="btnSimpan">Simpan ke Daftar Transaksi</button>
+            </form>
+        </div>
+    </section>
+
+    <section style="margin-top: 40px;">
+        <h2>Daftar Transaksi</h2>
+        <div class="card" style="overflow-x: auto;">
+            <table id="tabelTransaksi" style="width: 100%; border-collapse: collapse; text-align: left;">
+                <thead>
+                    <tr style="border-bottom: 2px solid #1db954;">
+                        <th style="padding: 10px;">No</th>
+                        <th style="padding: 10px;">Nama Pembeli</th>
+                        <th style="padding: 10px;">Paket</th>
+                        <th style="padding: 10px;">Durasi</th>
+                        <th style="padding: 10px;">Total Harga</th>
+                    </tr>
+                </thead>
+                <tbody id="isiTabel">
+                    </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+    <script src="script-199.js"></script>
+</body>
+</html>

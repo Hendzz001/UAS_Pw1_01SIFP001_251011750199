@@ -1,0 +1,233 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Header & Navigasi */
+header {
+    background-color: #1c1c1e;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #2c2c2e;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.logo span {
+    color: #1db954; /* Hijau Khas Musik */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #1db954;
+}
+
+/* Main Container */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.subtitle {
+    color: #b3b3b3;
+    margin-bottom: 30px;
+}
+
+/* Grid Katalog Lagu */
+.song-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.song-card {
+    background-color: #1c1c1e;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.song-card:hover {
+    background-color: #2c2c2e;
+    transform: translateY(-5px);
+}
+
+/* Modifikasi agar gambar cover membulat dan rapi */
+.song-cover {
+    background-color: #2c2c2e;
+    width: 100%;
+    aspect-ratio: 1; /* Memastikan rasio kotak sempurna 1:1 */
+    border-radius: 6px;
+    overflow: hidden; /* Penting: mencegah gambar melewati batas lengkungan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* Tambahkan aturan ini untuk mengatur gambar di dalam cover */
+.song-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mencegah gambar menjadi gepeng (terdistorsi) */
+}
+
+/* Tambahkan aturan ini untuk merapikan Audio Player */
+.song-audio {
+    margin-top: 15px;
+}
+
+.song-audio audio {
+    width: 100%; /* Membuat player musik selebar kartu */
+    height: 35px; /* Mengatur tinggi agar terlihat minimalis dan elegan */
+    outline: none;
+    border-radius: 4px;
+}
+
+/* Opsional: Membuat pemutar audio sedikit menyatu dengan tema dark mode */
+.song-audio audio::-webkit-media-controls-enclosure {
+    background-color: #2c2c2e;
+}
+.song-audio audio::-webkit-media-controls-current-time-display,
+.song-audio audio::-webkit-media-controls-time-remaining-display {
+    color: #fff;
+}
+
+.song-info h3 {
+    font-size: 16px;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-info .artist {
+    font-size: 14px;
+    color: #b3b3b3;
+    margin: 4px 0;
+}
+
+.song-info .duration {
+    font-size: 12px;
+    color: #727272;
+}
+
+/* Card Universal */
+.card {
+    background-color: #1c1c1e;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #2c2c2e;
+}
+
+.features {
+    margin-top: 20px;
+}
+
+.features h3 {
+    margin-bottom: 10px;
+    color: #1db954;
+}
+
+.features ul {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input, select {
+    background-color: #2c2c2e;
+    color: #fff;
+    border: 1px solid #3a3a3c;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #1db954;
+}
+
+button {
+    background-color: #1db954;
+    color: #fff;
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1ed760;
+}
+
+/* Box Notifikasi/Hasil */
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(29, 185, 84, 0.1);
+    border: 1px solid #1db954;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.result-box h3 span {
+    color: #1db954;
+}
